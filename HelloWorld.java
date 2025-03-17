@@ -1,3 +1,6 @@
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
 public class HelloWorld{
     public static void main (String[] args) {
         System.out.println("hello World!");
@@ -13,16 +16,15 @@ public class HelloWorld{
 
         // }while(ripeti == false);
 
-        String[] indirizzo = {'Città', 'via', 'civico', 'CAP', 'Paese'};
+        String[] indirizzo = {"Città", "via", "civico", "CAP", "Paese"};
         int numero = 2;
 
         if (2 % 2 == 0) {
-            System.out.println(Indirizzo.Città);
-            System.out.println( Indirizzo.via);
             numero *= numero;
             System.out.println(numero);
+            System.out.println(indirizzo);
         }
-
+ 
         // while (numero > 0){
         //     System.out.println(numero);
         // }
@@ -31,6 +33,14 @@ public class HelloWorld{
             System.out.println(indirizzo[i]);
         }
 
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Inserisci una stringa:");
+        int input = scanner.nextInt();
+        System.out.println("Hai inserito:" + input);
+        scanner.close();
+
+        Pattern delimiter = scanner.delimiter();
+        System.out.println(delimiter);
             
     }
 }  
